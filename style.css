@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', serif;
+  background: url('1000129643.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Header with slide animation */
+header {
+  background-color: rgba(0, 0, 50, 0.7);
+  text-align: center;
+  padding: 30px 20px;
+  animation: slideDown 1.2s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Marquee scrolling */
+.marquee-container {
+  background: rgba(255, 255, 0, 0.8);
+  overflow: hidden;
+  white-space: nowrap;
+  color: #222;
+  padding: 20px;
+  font-weight: Arialbold;
+  font-size: 24;
+  font-family: Times New Roman;
+  
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Section content with fade-in */
+.content {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+.fade-in.delay {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 50, 0.8);
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header, .content, .marquee-container {
+    padding: 20px;
+    font-size: 100%;
+  }
+  .btn-get-started {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 14px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background-color: #0056b3;
+}
+}
+

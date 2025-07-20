@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+}
+
+header {
+  background-color: #1a1a2e;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4da6ff;
+  margin-bottom: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu .btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  font-size: 15px;
+}
+
+.menu .home { background: #007bff; }
+.menu .chat { background: #6610f2; }
+.menu .profile { background: #6f42c1; }
+.menu .saved { background: #e83e8c; }
+.menu .pages { background: #fd7e14; }
+.menu .messages { background: #20c997; }
+
+.menu .btn:hover {
+  opacity: 0.85;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+.content {
+  text-align: center;
+  padding: 30px;
+}
+
+.start-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #4da6ff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #1e90ff;
+}
